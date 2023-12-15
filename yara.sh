@@ -10,8 +10,8 @@ FILENAME=$8
 LOCAL=`dirname $0`
 
 # Extra arguments
-YARA_PATH=/opt/yara-4.1.0/
-YARA_RULES=/opt/yara-4.1.0/rules/index.yar
+YARA_PATH=/opt/yara-4.1.0/  # where the yara installed
+YARA_RULES=/opt/yara-4.1.0/rules/index.yar # where the yara installed
 
 while [ "$1" != "" ]; do
   case $1 in
@@ -46,8 +46,8 @@ fi
 #------------------------- Main workflow --------------------------#
 
 # Execute YARA scan on the specified filename
-#yara_output=$(${YARA_PATH}/yara -w -r $YARA_RULES $FILENAME)
-yara_output=$(yara /opt/yara-4.1.0/rules/crypto_index.yar $FILENAME)
+yara_output=$(${YARA_PATH}/yara -w -r $YARA_RULES $FILENAME)
+
 
 if [[ $yara_output != "" ]]
 then
