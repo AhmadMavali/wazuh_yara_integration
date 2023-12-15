@@ -1,3 +1,6 @@
+#On the wazuh agent
+
+
 
 ####################################Install YARA Centos####################################
 yum install epel-release
