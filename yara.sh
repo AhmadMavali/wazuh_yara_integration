@@ -1,7 +1,6 @@
 #On the wazuh agent
 #vim /var/ossec/active-response/bin/yara.sh
 
-
 #!/bin/bash
 #------------------------- Gather parameters -------------------------#
 
